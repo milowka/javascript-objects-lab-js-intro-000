@@ -1,4 +1,4 @@
-var recipes = {object: "typeof"};
+var recipes = {prop: "1"};
 
 function updateObjectWithKeyAndValue (object,key,value) {
 return Object.assign({},recipes, {prop:'1'}, {prop2:'2'})
@@ -16,8 +16,8 @@ function deleteFromObjectByKey (object, key) {
   return newObj
 }
 
-var obj = {prop: 1};
-function destructivelyDeleteFromObjectByKey (object,key){
-delete obj.prop;
- return obj;
+
+function destructivelyDeleteFromObjectByKey(object, key) {
+  delete object[key];
+  return object;
 }
